@@ -1,0 +1,50 @@
+extends layout
+
+block content
+  section.page-heading
+    p.eyebrow Tasks
+    h1 Manage your tasks
+    p.lead Add work, update it, and keep the list simple.
+
+  section.task-layout
+    article.card
+      h2 Task Form
+      p.section-note Saved in your browser.
+      form#task-form.stack-form
+        input#task-id(type='hidden')
+
+        label(for='title') Title
+        input#title(type='text' name='title' placeholder='Finish JavaScript quiz' required)
+
+        label(for='category') Category
+        input#category(type='text' name='category' placeholder='JavaScript' required)
+
+        label(for='dueDate') Due date
+        input#dueDate(type='date' name='dueDate')
+
+        label(for='estimatedMinutes') Estimated minutes
+        input#estimatedMinutes(type='number' name='estimatedMinutes' min='5' step='5' value='25' required)
+
+        label(for='difficulty') Difficulty (1 to 5)
+        input#difficulty(type='number' name='difficulty' min='1' max='5' value='3' required)
+
+        .button-row
+          button.button#save-task(type='submit') Save Task
+          button.button.button-secondary#cancel-edit(type='button') Clear Form
+
+      p#task-form-message.form-message Fill in the form and click save.
+
+    article.card
+      .list-heading
+        .list-heading-copy
+          h2 Tasks
+          p#task-summary.section-note Your tasks will appear here.
+        .filter-buttons
+          button.filter-button.active(type='button' data-filter='all') All
+          button.filter-button(type='button' data-filter='active') Active
+          button.filter-button(type='button' data-filter='completed') Completed
+
+      ul#task-list.task-list
+
+block scripts
+  script(src='/js/tasks.js' defer)

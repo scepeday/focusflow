@@ -1,0 +1,42 @@
+extends layout
+
+block content
+  section.hero
+    .hero-copy
+      p.eyebrow FocusFlow
+      h1 Clear tasks. Clear next step.
+      p.lead
+        | A simple dashboard for planning your day with ranked tasks, weather,
+        | resource suggestions, and a focus timer.
+      .hero-actions
+        a.button(href='/tasks') Open Tasks
+        a.button.button-secondary(href='/focus') Start Focus
+
+  section.dashboard-grid
+    article.card
+      h2 Top Priority Task
+      div#top-priority-content.empty-state Add a task on the Tasks page to see your main priority.
+
+    article.card
+      h2 Top 3 Ranked Tasks
+      div#top-three-list.empty-state Your top ranked tasks will appear here.
+
+    article.card
+      h2 Weather
+      form#weather-form.stack-form
+        label(for='city') Enter a city
+        .inline-form
+          input#city(type='text' name='city' placeholder='Toronto' required)
+          button.button(type='submit') Check Weather
+      div#weather-result.empty-state Enter a city to load a weather update.
+
+    article.card
+      h2 Focus Session
+      div#focus-suggestion.empty-state Add tasks first so FocusFlow can suggest a session.
+
+    article.card.card-wide
+      h2 Resources
+      div#resource-list.empty-state Add tasks first so FocusFlow knows what topic to search.
+
+block scripts
+  script(src='/js/dashboard.js' defer)

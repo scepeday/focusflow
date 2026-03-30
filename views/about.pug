@@ -1,0 +1,33 @@
+extends layout
+
+block content
+  section.page-heading
+    p.eyebrow About
+    h1 About FocusFlow
+    p.lead A small productivity dashboard that feels smart without using real AI.
+
+  section.about-grid
+    article.card
+      h2 Project
+      p
+        | FocusFlow helps students and busy users decide what to work on next.
+        | It uses a clear scoring system to rank tasks instead of calling an AI model.
+      p
+        | The goal is to keep the project realistic, understandable, and easy to explain.
+
+    article.card
+      h2 What It Does
+      ul.simple-list
+        li Add, edit, delete, and complete tasks.
+        li Save tasks in localStorage so they stay in the browser.
+        li Show the top priority task and the top 3 ranked tasks.
+        li Display weather after the user enters a city.
+        li Recommend books based on the highest ranked category.
+        li Run a simple focus timer for study sessions.
+
+    article.card
+      h2 APIs
+      ul.simple-list
+        li Geoapify Geocoding API converts a city into coordinates.
+        li Open-Meteo Weather API returns current weather details.
+        li Open Library API searches books related to the top task category.

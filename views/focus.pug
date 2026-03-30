@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  section.page-heading
+    p.eyebrow Focus
+    h1 One task at a time
+    p.lead Choose a task and run a simple timer.
+
+  section.focus-layout
+    article.card
+      h2 Task
+      label(for='focus-task-select') Active task
+      select#focus-task-select
+        option(value='') Select a task
+      div#focus-task-card.empty-state Add tasks on the Tasks page to start a focus session.
+
+    article.card.timer-card
+      h2 Timer
+      p.section-note Suggested session: 25, 35, or 45 minutes.
+      div#timer-display.timer-display 25:00
+      p#timer-message.timer-message Press start when you are ready.
+      .button-row
+        button.button#start-timer(type='button') Start
+        button.button.button-secondary#pause-timer(type='button') Pause
+        button.button.button-secondary#reset-timer(type='button') Reset
+      a.button.button-secondary.full-width-link(href='/tasks') Back to Tasks
+
+block scripts
+  script(src='/js/focus.js' defer)
