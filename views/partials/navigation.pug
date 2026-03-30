@@ -1,0 +1,8 @@
+header.site-header
+  .container.header-inner
+    a.brand(href='/') FocusFlow
+    nav.site-nav(aria-label='Main navigation')
+      a(class=currentPage === 'home' ? 'active' : '' href='/') Dashboard
+      a(class=currentPage === 'tasks' ? 'active' : '' href='/tasks') Tasks
+      a(class=currentPage === 'focus' ? 'active' : '' href='/focus') Focus
+      a(class=currentPage === 'about' ? 'active' : '' href='/about') About
