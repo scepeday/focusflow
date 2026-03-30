@@ -1,0 +1,26 @@
+{
+  "name": "focusflow",
+  "version": "1.0.0",
+  "description": "A simple productivity dashboard built with Node.js, Express, Pug, and vanilla JavaScript.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node --watch app.js"
+  },
+  "keywords": [
+    "productivity",
+    "express",
+    "pug",
+    "student-project"
+  ],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "pug": "^3.0.3"
+  }
+}
